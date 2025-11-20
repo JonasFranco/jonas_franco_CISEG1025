@@ -1,14 +1,16 @@
+contador = 0
 
-num = 0
-while num < 255:
+while contador <= 255:
 
-    print(num)
-    num += 20
+    for i in range(20):
+        if contador > 255:
+            break
+        print(f"{contador:3} -> {chr(contador)}")
+        contador += 1
 
-    rever depois
+    opcao = input("Continuar? (sim ou nao): ").lower()
+    if opcao != "sim":
+        print("Termina programa")
+        break
 
-
-    pra fazer de 20 em 20 
-
-    for i in range(0,255,20):
-    print(i)
+print("final.")
